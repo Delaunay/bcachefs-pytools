@@ -1,0 +1,3 @@
+[submodule "dependencies/bcachefs-tools"]
+	path = dependencies/bcachefs-tools
+	url = https://evilpiepirate.org/git/bcachefs-tools.git
