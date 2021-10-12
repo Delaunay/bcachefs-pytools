@@ -5,7 +5,7 @@ import subprocess
 
 
 if __name__ == '__main__':
-    subprocess.run("make", shell=True, check=True)
+    subprocess.run("make build-bcachefs", shell=True, check=True)
 
     setup(
         name='pybcachefs',
@@ -18,6 +18,11 @@ if __name__ == '__main__':
         packages=[
             'pybcachefs',
         ],
-        scripts=['pybcachefs/bcachefs'],
+        # scripts=['pybcachefs/bcachefs'],
         setup_requires=['setuptools'],
+        entry_points={
+            'console_scripts': [
+                'bcachefs = pybcachefs.bcachefs:main',
+            ],
+        },
     )
